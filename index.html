@@ -1,245 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Accolink | Find Your Place to Stay in Kasane</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Accolink – Find Your Perfect Guesthouse in Kasane & Chobe</title>
 
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css">
 
-<style>
-:root{
-  --emerald:#0f766e;
-  --dark:#0b1f1c;
-  --light:#ffffff;
-  --soft:#f4fefe;
-}
-
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-
-body{
-  margin:0;
-  background:var(--soft);
-  color:#111;
-}
-
-header{
-  background:var(--dark);
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-header h1 span{color:var(--emerald)}
-
-.search-box{
-  max-width:500px;
-  margin:20px auto;
-}
-
-.search-box input{
-  width:100%;
-  padding:14px;
-  border-radius:30px;
-  border:1px solid #ccc;
-  font-size:16px;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:20px;
-}
-
-.card{
-  background:white;
-  border-radius:16px;
-  margin-bottom:40px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-
-.slider{
-  position:relative;
-}
-
-.slider img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  display:none;
-}
-
-.slider img.active{display:block}
-
-.slider button{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.5);
-  border:none;
-  color:white;
-  padding:10px;
-  cursor:pointer;
-}
-
-.prev{left:10px}
-.next{right:10px}
-
-.card-body{
-  padding:20px;
-}
-
-.price{
-  color:var(--emerald);
-  font-size:20px;
-  font-weight:bold;
-}
-
-.amenities{
-  display:flex;
-  gap:20px;
-  margin:15px 0;
-  flex-wrap:wrap;
-}
-
-.amenity{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  color:#333;
-}
-
-.actions{
-  display:flex;
-  gap:15px;
-  margin-top:20px;
-}
-
-.actions a{
-  flex:1;
-  text-align:center;
-  padding:12px;
-  border-radius:30px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.whatsapp{background:#25d366}
-.call{background:var(--emerald)}
-
-footer{
-  text-align:center;
-  padding:20px;
-  color:#555;
-}
-</style>
+<!-- Google Analytics placeholder -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // gtag('config', 'YOUR_TRACKING_ID'); // Uncomment later
+</script>
 </head>
 <body>
 
 <header>
-  <h1><span>Accolink</span> – Find Your Place to Stay in Kasane</h1>
+  <h1>Welcome to <span>Accolink</span> – Your Gateway to Guesthouses in Kasane & Chobe</h1>
 </header>
 
 <div class="search-box">
-  <input type="text" id="search" placeholder="Search guesthouse, location or amenity..." />
+  <input type="text" id="search" placeholder="Search guesthouse, location, amenity or room..." />
 </div>
 
 <div class="container" id="listings"></div>
 
-<footer>
-  © 2026 Accolink | Kasane & Chobe
-</footer>
+<footer>© 2026 Accolink | Kasane & Chobe</footer>
 
-<script>
-// ==========================
-// 🔥 EDIT ONLY THIS SECTION
-// ==========================
-const guesthouses = [
-{
-  id:"pheads-01",
-  name:"Punkinheads Guesthouse",
-  location:"Kasane Plateau",
-  price:800,
-  phone:"26774938278",
-  amenities:["WiFi","TV","Breakfast","Security"],
-  images:[
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/WhatsApp%20Image%202026-01-31%20at%2018.17.52%20(1).jpeg",
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/15df0959-851e-4b0a-9d72-97a3a94aaf95.jpg",
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/29213951-bfc1-41e9-8cdf-44361402b58b.jpg",
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/cf27f7af-431e-4aa1-88a7-5e8e426a99d7.jpg",
-  "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/WhatsApp%20Image%202026-01-31%20at%2018.17.59.jpeg",
-"https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/d339890f-93c6-4680-b155-3187d721a817.jpg"
-    ]
-}
-];
-// ==========================
-
-const icons={
-  WiFi:"fa-wifi",
-  TV:"fa-tv",
-  Security:"fa-shield-halved",
-  Breakfast:"fa-mug-hot"
-};
-
-function render(data){
-  const container=document.getElementById("listings");
-  container.innerHTML="";
-
-  data.forEach((g,i)=>{
-    const imgs=g.images.map((img,j)=>`<img src="${img}" class="${j===0?'active':''}">`).join("");
-
-    const am=g.amenities.map(a=>`
-      <div class="amenity">
-        <i class="fa-solid ${icons[a]||'fa-circle-check'}"></i>${a}
-      </div>`).join("");
-
-    container.innerHTML+=`
-    <div class="card">
-      <div class="slider" data-index="0">
-        ${imgs}
-        <button class="prev" onclick="slide(this,-1)">❮</button>
-        <button class="next" onclick="slide(this,1)">❯</button>
-      </div>
-      <div class="card-body">
-        <h2>${g.name}</h2>
-        <p>${g.location}</p>
-        <p class="price">P ${g.price} / night</p>
-        <div class="amenities">${am}</div>
-        <div class="actions">
-          <a class="whatsapp" target="_blank"
-             href="https://wa.me/${g.phone}?text=Hello%20I%20saw%20your%20guesthouse%20on%20Accolink.%20Any%20room%20available?">
-             WhatsApp
-          </a>
-          <a class="call" href="tel:+${g.phone}">Call</a>
-        </div>
-      </div>
-    </div>`;
-  });
-}
-
-function slide(btn,dir){
-  const slider=btn.parentElement;
-  const imgs=slider.querySelectorAll("img");
-  let i=[...imgs].findIndex(img=>img.classList.contains("active"));
-  imgs[i].classList.remove("active");
-  i=(i+dir+imgs.length)%imgs.length;
-  imgs[i].classList.add("active");
-}
-
-document.getElementById("search").addEventListener("input",e=>{
-  const q=e.target.value.toLowerCase();
-  render(guesthouses.filter(g=>
-    g.name.toLowerCase().includes(q) ||
-    g.location.toLowerCase().includes(q) ||
-    g.amenities.join(" ").toLowerCase().includes(q)
-  ));
-});
-
-render(guesthouses);
-</script>
+<!-- JS files included in order -->
+<script src="guesthouses.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
