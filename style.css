@@ -1,13 +1,18 @@
 :root{
   --emerald:#0f766e;
-  --dark:#0b1f1c;
-  --light:#ffffff;
-  --soft:#f4fefe;
+  --emerald-dark:#0b5f59;
+  --charcoal:#1f2933;
+  --pearl:#f7f9f8;   /* replaces white */
+  --card:#fffffffa; /* soft white, not harsh */
 }
 
 *{box-sizing:border-box; font-family:Arial,Helvetica,sans-serif}
 
-body{margin:0; background:var(--soft); color:#111;}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#eef5f3,#f9fbfa);
+  color:var(--charcoal);
+}
 
 header{background:var(--dark); color:white; padding:20px; text-align:center;}
 header h1 span{color:var(--emerald)}
@@ -30,10 +35,46 @@ header h1 span{color:var(--emerald)}
 .amenities{display:flex; gap:20px; margin:15px 0; flex-wrap:wrap;}
 .amenity{display:flex; align-items:center; gap:6px; color:#333;}
 
-.actions{display:flex; gap:15px; margin-top:20px;}
-.actions a{flex:1; text-align:center; padding:12px; border-radius:30px; color:white; text-decoration:none; font-weight:bold;}
-.whatsapp{background:#25d366} 
-.call{background:var(--emerald)}
+.actions{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:20px;
+}
+
+.actions a{
+  text-align:center;
+  padding:14px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.3px;
+  transition:all .2s ease;
+}
+
+/* Book Now – primary */
+.book{
+  background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));
+  color:white;
+  box-shadow:0 8px 20px rgba(15,118,110,.35);
+}
+
+.book:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(15,118,110,.45);
+}
+
+/* Call – secondary */
+.call{
+  background:var(--pearl);
+  color:var(--emerald);
+  border:2px solid var(--emerald);
+}
+
+.call:hover{
+  background:var(--emerald);
+  color:white;
+}
 
 footer{text-align:center; padding:20px; color:#555;}
 footer a{
