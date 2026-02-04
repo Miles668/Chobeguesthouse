@@ -36,3 +36,12 @@ header h1 span{color:var(--emerald)}
 .call{background:var(--emerald)}
 
 footer{text-align:center; padding:20px; color:#555;}
+footer a{
+  color:var(--emerald);
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer a:hover{
+  text-decoration:underline;
+}
