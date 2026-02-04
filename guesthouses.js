@@ -6,13 +6,15 @@ const guesthouses = [
   phone:"26774938278",
   amenities:["WiFi","TV","DStv","Breakfast","Security"],
   rooms:[
-    { name: price/night:800 },
+   { name: "Room", price: 800 } ,
   ],
   images:[
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/WhatsApp%20Image%202026-01-31%20at%2018.17.52%20(1).jpeg",
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/15df0959-851e-4b0a-9d72-97a3a94aaf95.jpg",
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/29213951-bfc1-41e9-8cdf-44361402b58b.jpg",
-    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/cf27f7af-431e-4aa1-88a7-5e8e426a99d7.jpg"
+    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.17.54.jpeg",
+      "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.17.57.jpeg",
+      "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.17.58.jpeg",
+      "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.18.29.jpeg",
+      "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.18.31.jpeg",
+      "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.18.36.jpeg"
   ]
 },
 
