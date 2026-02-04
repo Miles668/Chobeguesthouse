@@ -47,12 +47,15 @@ function render(data){
           <div class="amenities">${am}</div>
 
           <div class="actions">
-            <a class="whatsapp" target="_blank"
-              href="https://wa.me/${g.phone}?text=Hello%20I%20saw%20your%20guesthouse%20on%20Accolink.%20Any%20room%20available?">
-              WhatsApp
-            </a>
-            <a class="call" href="tel:+${g.phone}">Call</a>
-          </div>
+  <a class="book" target="_blank"
+     href="https://wa.me/${g.phone}?text=Hello%20I%20saw%20your%20guesthouse%20on%20Accolink.%20Any%20room%20available?">
+     Book Now
+  </a>
+
+  <a class="call" href="tel:+${g.phone}">
+     Call
+  </a>
+</div>
         </div>
       </div>
     `;
