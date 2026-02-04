@@ -7,24 +7,48 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <h1><span class="accent">Accolink</span> – Kasane-Chobe Guesthouses</h1>
-    <input type="text" id="search" placeholder="Search guesthouse, location, ...">
+    <h1>Accolink</h1>
+    <p>Kasane-Chobe Guesthouses</p>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search guesthouse...">
+    </div>
   </header>
 
   <main id="guesthouse-container"></main>
 
-  <!-- Photo Modal -->
   <div id="photo-modal" class="modal">
-    <span class="close">&times;</span>
-    <div class="modal-content" id="modal-slider"></div>
-    <div id="photo-count"></div>
+    <div class="modal-wrapper">
+      <span class="close">&times;</span>
+      
+      <div class="modal-slider-section">
+        <div id="modal-slider"></div>
+        <div class="slider-controls">
+          <button id="prevBtn">&#10094;</button>
+          <div id="photo-count"></div>
+          <button id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="modal-details-section">
+        <h2 id="modal-title"></h2>
+        <p id="modal-location" class="location-text"></p>
+        <div class="divider"></div>
+        <p id="modal-price" class="price-text"></p>
+        
+        <h4>Amenities:</h4>
+        <div id="modal-amenities" class="amenities-list"></div>
+
+        <div id="modal-buttons" class="action-buttons"></div>
+      </div>
+    </div>
   </div>
 
   <footer>
     <p>Connect with us: 
-      <a href="https://www.facebook.com/profile.php?id=61587234453360" target="_blank" class="social">Facebook</a> | 
-      <a href="mailto:accolink527@gmail.com" class="social">Email</a>
+      <a href="https://www.facebook.com/profile.php?id=61587234453360" target="_blank">Facebook</a> | 
+      <a href="mailto:accolink527@gmail.com">Email</a>
     </p>
   </footer>
 
