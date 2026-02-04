@@ -6,9 +6,7 @@ const guesthouses = [
   phone:"26774938278",
   amenities:["WiFi","TV","Breakfast","Security"],
   rooms:[
-    { name:"Standard Room", price:800 },
-    { name:"Deluxe Room", price:1200 },
-    { name:"Suite", price:2000 }
+    { name:, price:800 },
   ],
   images:[
     "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/property-images/WhatsApp%20Image%202026-01-31%20at%2018.17.52%20(1).jpeg",
