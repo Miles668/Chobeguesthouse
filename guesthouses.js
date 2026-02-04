@@ -14,7 +14,10 @@ const guesthouses = [
       "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.17.58.jpeg",
       "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.18.29.jpeg",
       "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.18.31.jpeg",
-      "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.18.36.jpeg"
+      "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.18.36.jpeg",
+   " https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/WhatsApp%20Image%202026-01-31%20at%2018.17.59.jpeg",
+   " https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/cf27f7af-431e-4aa1-88a7-5e8e426a99d7.jpg",
+   " https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/pinkinheads%20guesthouse/d339890f-93c6-4680-b155-3187d721a817.jpg"
   ]
 },
 
