@@ -1,81 +1,167 @@
+/* =========================
+   Accolink Guesthouses CSS
+   Dark green + brown luxury theme
+============================= */
+
 :root{
-  --emerald:#0f766e;
-  --emerald-dark:#0b5f59;
-  --charcoal:#1f2933;
-  --pearl:#f7f9f8;   /* replaces white */
-  --card:#fffffffa; /* soft white, not harsh */
+  --green-dark: #064635;    /* Deep green for background & primary buttons */
+  --green: #0b6b50;         /* Accent green for hover */
+  --brown: #7c4a2e;         /* Card background */
+  --soft: #f7f5f2;          /* Off-white text */
+  --charcoal: #1f2933;      /* Main text for headings if needed */
 }
 
-*{box-sizing:border-box; font-family:Arial,Helvetica,sans-serif}
+/* ----------------------
+   General resets
+----------------------- */
+*{
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 body{
-  margin:0;
-  background:linear-gradient(180deg,#eef5f3,#f9fbfa);
-  color:var(--charcoal);
+  background: var(--green-dark);
+  color: var(--charcoal);
+  line-height: 1.5;
 }
 
-header{background:var(--dark); color:white; padding:20px; text-align:center;}
-header h1 span{color:var(--emerald)}
+/* ----------------------
+   Header
+----------------------- */
+header{
+  background: var(--green-dark);
+  color: var(--soft);
+  padding: 20px;
+  text-align: center;
+}
 
-.search-box{max-width:500px; margin:20px auto;}
-.search-box input{width:100%; padding:14px; border-radius:30px; border:1px solid #ccc; font-size:16px;}
+header h1 span{
+  color: var(--green);
+}
 
-.container{max-width:1200px; margin:auto; padding:20px;}
+/* ----------------------
+   Search box
+----------------------- */
+.search-box{
+  max-width: 500px;
+  margin: 20px auto;
+}
 
-.card{background:white; border-radius:16px; margin-bottom:40px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.1);}
+.search-box input{
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
 
-.slider{position:relative;}
-.slider img{width:100%; height:350px; object-fit:cover; display:none;}
-.slider img.active{display:block;}
-.slider button{position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.5); border:none; color:white; padding:10px; cursor:pointer;}
-.prev{left:10px} .next{right:10px}
+/* ----------------------
+   Container for listings
+----------------------- */
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ----------------------
+   Card
+----------------------- */
+.card{
+  background: var(--brown);
+  color: var(--soft);
+  border-radius: 16px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+/* Slider */
+.slider{
+  position: relative;
+}
+
+.slider img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: none;
+}
+
+.slider img.active{
+  display: block;
+}
+
+.slider button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev{left: 10px;}
+.next{right: 10px;}
+
+/* ----------------------
+   Card body
+----------------------- */
+.card-body{
+  padding: 20px;
+}
 
 .card-body h2,
-.card-body p {
-  color: var(--soft); /* off-white text for brown cards */
+.card-body p{
+  color: var(--soft);
 }
 
-.rooms p {
-  color: var(--soft); /* same off-white for prices and room names */
+.rooms p{
+  color: var(--soft);
+  margin: 5px 0;
 }
 
-.amenities {
+/* ----------------------
+   Amenities
+----------------------- */
+.amenities{
   display: flex;
-  gap: 29px;         /* keeps space between icons */
+  gap: 29px;
   margin: 15px 0;
-  flex-wrap: wrap;   /* wraps on small screens */
+  flex-wrap: wrap;
 }
 
-.amenity {
+.amenity{
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--soft); /* off-white text for luxury feel */
+  color: var(--soft);
 }
 
-
+/* ----------------------
+   Action buttons
+----------------------- */
 .actions{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin-top:20px;
-}
-
-.actions{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin-top:20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .actions a{
-  text-align:center;
-  padding:14px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:700;
-  letter-spacing:.3px;
-  transition:all .2s ease;
+  text-align: center;
+  padding: 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .3px;
+  transition: all .2s ease;
 }
 
 /* Book Now – primary */
@@ -94,7 +180,7 @@ header h1 span{color:var(--emerald)}
 .call{
   background: var(--soft);
   color: var(--green-dark);
-  border:2px solid var(--green-dark);
+  border: 2px solid var(--green-dark);
 }
 
 .call:hover{
@@ -102,14 +188,25 @@ header h1 span{color:var(--emerald)}
   color: var(--soft);
 }
 
-
-footer{text-align:center; padding:20px; color:#555;}
-footer a{
-  color:var(--emerald);
-  text-decoration:none;
-  font-weight:600;
+/* ----------------------
+   Footer
+----------------------- */
+footer{
+  text-align: center;
+  padding: 20px;
+  color: var(--soft);
+  background: var(--green-dark);
+  font-size: 14px;
 }
 
-footer a:hover{
-  text-decoration:underline;
+/* ----------------------
+   Responsive tweaks
+----------------------- */
+@media screen and (max-width: 768px){
+  .slider img{
+    height: 250px;
+  }
+  .search-box input{
+    font-size: 14px;
+  }
 }
