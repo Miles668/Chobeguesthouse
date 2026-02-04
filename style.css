@@ -30,10 +30,36 @@ header h1 span{color:var(--emerald)}
 .slider button{position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.5); border:none; color:white; padding:10px; cursor:pointer;}
 .prev{left:10px} .next{right:10px}
 
-.card-body{padding:20px;}
-.rooms p{margin:5px 0;}
-.amenities{display:flex; gap:20px; margin:15px 0; flex-wrap:wrap;}
-.amenity{display:flex; align-items:center; gap:6px; color:#333;}
+.card-body h2,
+.card-body p {
+  color: var(--soft); /* off-white text for brown cards */
+}
+
+.rooms p {
+  color: var(--soft); /* same off-white for prices and room names */
+}
+
+.amenities {
+  display: flex;
+  gap: 29px;         /* keeps space between icons */
+  margin: 15px 0;
+  flex-wrap: wrap;   /* wraps on small screens */
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--soft); /* off-white text for luxury feel */
+}
+
+
+.actions{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:20px;
+}
 
 .actions{
   display:flex;
@@ -54,27 +80,28 @@ header h1 span{color:var(--emerald)}
 
 /* Book Now – primary */
 .book{
-  background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));
-  color:white;
-  box-shadow:0 8px 20px rgba(15,118,110,.35);
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: var(--soft);
+  box-shadow: 0 8px 20px rgba(6,70,53,.35);
 }
 
 .book:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 28px rgba(15,118,110,.45);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(6,70,53,.45);
 }
 
 /* Call – secondary */
 .call{
-  background:var(--pearl);
-  color:var(--emerald);
-  border:2px solid var(--emerald);
+  background: var(--soft);
+  color: var(--green-dark);
+  border:2px solid var(--green-dark);
 }
 
 .call:hover{
-  background:var(--emerald);
-  color:white;
+  background: var(--green-dark);
+  color: var(--soft);
 }
+
 
 footer{text-align:center; padding:20px; color:#555;}
 footer a{
