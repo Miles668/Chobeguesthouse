@@ -2,7 +2,7 @@ const guesthouses = [
 {
   id:"pheads-01",
   name:"Punkinheads Guesthouse",
-  location:"Kasane Plateau",
+  location:"Plateau, Kasane",
   phone:"26774938278",
   amenities:["WiFi","TV","DStv","Breakfast","Security"],
   rooms:[
