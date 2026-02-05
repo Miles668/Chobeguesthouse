@@ -73,7 +73,7 @@ function openFullModal(id) {
 
   // Buttons (Book & Call)
   mButtons.innerHTML = `
-    <a href="https://wa.me/${currentGuesthouse.phone}?text=Hello, I saw your guest house listing on Accolink and i would like to make a booking. Is it available?" target="_blank" class="btn-book">Book on WhatsApp</a>
+    <a href="https://wa.me/${currentGuesthouse.phone}?text=Hello, I saw your guest house listing on Accolink and i would like to make a booking" target="_blank" class="btn-book">Book on WhatsApp</a>
     <a href="tel:+${currentGuesthouse.phone}" class="btn-call">Call Now</a>
   `;
 
