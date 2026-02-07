@@ -69,3 +69,31 @@ const guesthouses = [
   ]
 }
 ];
+{
+  id: "sunshine-vibe-01",
+  name: "Sunshine Vibe Guesthouse",
+  location: "Kasane",
+  phone: "26771990331",
+
+  amenities: [
+    "WiFi",
+    "DStv",
+    "Parking",
+    "Laundry Service",
+    "Breakfast",
+    "Tea or Coffee",
+    "Free Airport Shuttle"
+  ],
+
+  rooms: [
+    { name: "Standard Room", price: 650 }
+  ],
+
+  images: [
+    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/Sunshine%20vibe%20guest%20house/IMG-20260207-WA0077.jpg",
+    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/Sunshine%20vibe%20guest%20house/IMG-20260207-WA0078.jpg",
+    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/Sunshine%20vibe%20guest%20house/IMG-20260207-WA0079.jpg",
+    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/Sunshine%20vibe%20guest%20house/IMG-20260207-WA0080.jpg",
+    "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/Sunshine%20vibe%20guest%20house/IMG-20260207-WA0081.jpg"
+  ]
+     }
