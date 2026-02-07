@@ -67,8 +67,8 @@ const guesthouses = [
     "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/starlight%20guest%20house/WhatsApp%20Image%202026-02-02%20at%2016.22.57.jpeg",
     "https://vmctxpfqlwqhcdwiqkpg.supabase.co/storage/v1/object/public/starlight%20guest%20house/WhatsApp%20Image%202026-02-02%20at%2016.22.57%20(1).jpeg"
   ]
-}
-];
+},
+
 {
   id: "sunshine-vibe-01",
   name: "Sunshine Vibe Guesthouse",
